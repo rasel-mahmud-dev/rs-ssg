@@ -1,0 +1,1 @@
+tsc && node ./bin/rs-ssg.js  && cd playground && pnpm install && npm run build

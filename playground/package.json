@@ -1,0 +1,22 @@
+{
+  "name": "rs-ssg-playground",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rs-ssg dev",
+    "build": "rs-ssg build",
+    "preview": "rs-ssg preview",
+    "deploy": "rs-ssg build && firebase deploy --only hosting"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "@vitejs/plugin-react": "^5.0.3",
+    "vite": "^7.1.6"
+  }
+}

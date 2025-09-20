@@ -20,18 +20,18 @@ const routes = [
     //     component: lazy(() => import('./pages/Examples.jsx')),
     //     title: 'Examples'
     // },
+    // {
+    //     path: '/docs',
+    //     entry: "/src/pages/Docs.jsx",
+    //     component: lazy(() => import('./pages/Docs.jsx')),
+    //     title: 'Docs',
+    // }
     {
-        path: '/docs',
-        entry: "/src/pages/Docs.jsx",
-        component: lazy(() => import('./pages/Docs.jsx')),
-        title: 'Docs',
+        path: '/about',
+        component: lazy(() => import('./pages/About.jsx')),
+        entry: "/src/pages/About.jsx",
+        title: 'About Screen'
     }
-//     {
-//         path: '/about',
-//         component: lazy(() => import('./pages/About.jsx')),
-//         entry: "/src/pages/About.jsx",
-//         title: 'About Screen'
-//     }
 ]
 
 

@@ -38,7 +38,7 @@ function Home() {
 
 export async function getStaticPaths() {
     const data = [
-        { id: 1, title: "Item 1", value: "Value 1", link: "https://examples1.com/1" },
+        { id: "ssg-super", title: "Item 1", value: "Value 1", link: "https://examples1.com/1" },
         { id: 2, title: "Item 2", value: "Value 2", link: "https://examples1.com/2" },
         { id: 3, title: "Item 3", value: "Value 3", link: "https://examples1.com/3" },
         { id: 4, title: "Item 4", value: "Value 4", link: "https://examples1.com/4" },

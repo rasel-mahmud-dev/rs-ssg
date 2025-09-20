@@ -1,1 +1,1 @@
-tsc && node ./bin/rs-ssg.js ## && npm publish --access public
+ node ./bin/rs-ssg.js  && npm publish --access public

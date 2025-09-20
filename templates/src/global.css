@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+@theme {
+    --color-midnight: rgba(0, 53, 168, 0.51);
+    --color-primary: #45b268;
+    --color-tahiti: #3ab7bf;
+    --color-bermuda: #78dcca;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s;
+}
+

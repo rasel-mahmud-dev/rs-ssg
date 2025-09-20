@@ -7,7 +7,7 @@
     "dev": "rs-ssg dev",
     "build": "rs-ssg build",
     "preview": "rs-ssg preview",
-    "deploy": "rs-ssg build && firebase deploy --only hosting"
+    "deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
     "react": "^19.1.1",

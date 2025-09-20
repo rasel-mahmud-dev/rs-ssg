@@ -22,7 +22,10 @@
     "@tailwindcss/vite": "^4.1.13",
     "@types/node": "^24.5.2",
     "@vitejs/plugin-react": "^5.0.3",
+    "esbuild-plugin-tailwindcss": "^2.1.0",
+    "esbuild-register": "^3.6.0",
     "glob": "^11.0.3",
+    "tailwindcss": "^4.0.0",
     "tsx": "^4.20.5",
     "typescript": "~5.7.2",
     "vite": "^7.1.6"
@@ -33,9 +36,9 @@
     "chalk": "^5.6.2",
     "esbuild": "^0.25.10",
     "fs-extra": "^11.3.2",
+    "lucide-react": "^0.544.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.10"
+    "react-dom": "^19.1.1"
   },
   "keywords": [
     "react",

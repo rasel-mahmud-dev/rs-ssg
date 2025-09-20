@@ -146,15 +146,6 @@ export default {
     publicDir: './public',
     buildDir: './.my-framework',
     outputDir: './dist',
-    redirects: async () => {
-        return [
-            {
-                source: '/old-page',
-                destination: '/new-page',
-                permanent: true
-            }
-        ];
-    },
     resolve: {
         alias: {
             '@': '/src'

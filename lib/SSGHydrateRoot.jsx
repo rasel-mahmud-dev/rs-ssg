@@ -1,5 +1,5 @@
 import React, {StrictMode} from 'react'
-import {hydrateRoot} from 'react-dom/client'
+import {createRoot, hydrateRoot} from 'react-dom/client';
 import CoreApp from "./coreApp.jsx"
 
 function SSGHydrateRoot(App, routes) {
@@ -24,17 +24,30 @@ function SSGHydrateRoot(App, routes) {
             return children
         }
 
-        hydrateRoot(container,
-           <StrictMode>
-               <ErrorBoundary>
-                   <App {...initialProps}>
-                       <CoreApp routes={routes} />
-                   </App>
-               </ErrorBoundary>
-           </StrictMode>
-        )
+        if(!container.innerHTML){
+            const root = createRoot(container);
+            return root.render(
+                <StrictMode>
+                    <ErrorBoundary>
+                        <App {...initialProps}>
+                            <CoreApp routes={routes} />
+                        </App>
+                    </ErrorBoundary>
+                </StrictMode>
+            );
+        } else {
+            hydrateRoot(container,
+                <StrictMode>
+                    <ErrorBoundary>
+                        <App {...initialProps}>
+                            <CoreApp routes={routes}/>
+                        </App>
+                    </ErrorBoundary>
+                </StrictMode>
+            )
+        }
     } catch (error) {
-        hydrateRoot(container, <div>Hydration failed: {error.message}</div>)
+        // hydrateRoot(container, <div>Hydration failed: {error.message}</div>)
         console.error('❌ Hydration failed:', error)
     }
 }

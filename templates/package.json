@@ -9,7 +9,7 @@
         "preview": "rs-ssg preview"
     },
     "dependencies": {
-        "rs-ssg": "file:../../vite-ssg",
+        "rs-ssg": "^{{VERSION}}",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
         "tailwindcss": "^4.1.10"
@@ -18,5 +18,15 @@
         "@vitejs/plugin-react": "^5.0.3",
         "@tailwindcss/vite": "^4.1.13",
         "vite": "^7.1.6"
-    }
+    },
+    "keywords": [
+        "ssg",
+        "react",
+        "framework",
+        "esbuild",
+        "vite",
+        "routing"
+    ],
+    "author": "Rasel Mahmud",
+    "license": "MIT"
 }

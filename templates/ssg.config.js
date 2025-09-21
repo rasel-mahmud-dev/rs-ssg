@@ -4,6 +4,7 @@ export default {
     siteName: 'RS Rasel Mahmud Dev',
     port: 3000,
     seo: {
+
         // Default SEO settings - will be used if not overridden in page layer
         title: 'RS Rasel Mahmud Dev - Full Stack Developer',
         titleTemplate: '%s | RS Rasel Mahmud Dev', // %s will be replaced with page title
@@ -59,11 +60,9 @@ export default {
             }
         },
 
-        // Theme and branding
         themeColor: '#000000',
         backgroundColor: '#ffffff',
 
-        // Icons and manifest
         icons: {
             favicon: '/favicon.ico',
             icon16: '/favicon-16x16.png',
@@ -72,83 +71,12 @@ export default {
             androidIcon192: '/android-chrome-192x192.png',
             androidIcon512: '/android-chrome-512x512.png'
         },
-
-        // Manifest settings
         manifest: '/site.webmanifest',
-
-        // Additional meta tags
-        additionalMetaTags: [
-            {
-                name: 'format-detection',
-                content: 'telephone=no'
-            },
-            {
-                httpEquiv: 'X-UA-Compatible',
-                content: 'IE=edge'
-            },
-            {
-                name: 'HandheldFriendly',
-                content: 'true'
-            },
-            {
-                name: 'MobileOptimized',
-                content: 'width'
-            },
-            {
-                name: 'apple-mobile-web-app-capable',
-                content: 'yes'
-            },
-            {
-                name: 'apple-mobile-web-app-status-bar-style',
-                content: 'black-translucent'
-            }
-        ],
-
-        // Additional link tags
-        additionalLinkTags: [
-            {
-                rel: 'preconnect',
-                href: 'https://fonts.googleapis.com',
-                crossOrigin: 'anonymous'
-            },
-            {
-                rel: 'preconnect',
-                href: 'https://fonts.gstatic.com',
-                crossOrigin: 'anonymous'
-            },
-            {
-                rel: 'dns-prefetch',
-                href: '//www.google-analytics.com'
-            },
-            {
-                rel: 'sitemap',
-                type: 'application/xml',
-                href: '/sitemap.xml'
-            },
-            {
-                rel: 'alternate',
-                type: 'application/rss+xml',
-                title: 'RSS Feed',
-                href: '/feed.xml'
-            }
-        ],
-
-        // Security headers
         security: {
             contentSecurityPolicy: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:;",
             xFrameOptions: 'DENY',
             xContentTypeOptions: 'nosniff',
             referrerPolicy: 'strict-origin-when-cross-origin'
-        }
-    },
-    host: 'localhost',
-    pagesDir: './pages',
-    publicDir: './public',
-    buildDir: './.my-framework',
-    outputDir: './dist',
-    resolve: {
-        alias: {
-            '@': '/src'
         }
     }
 }

@@ -3,8 +3,8 @@
   "version": "1.0.12",
   "description": "",
   "type": "module",
-  "types": "dist/lib/**.d.ts",
-  "main": "dist/lib/index.js",
+  "types": "lib/**.d.ts",
+  "main": "lib/index.js",
   "bin": {
     "rs-ssg": "./bin/rs-ssg.js"
   },
@@ -14,7 +14,7 @@
     "lib",
     "templates",
     "lib/types",
-    "vite.config.ts"
+    "core"
   ],
   "scripts": {},
   "devDependencies": {

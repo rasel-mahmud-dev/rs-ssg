@@ -1,10 +1,6 @@
-import {createRoot, hydrateRoot} from 'react-dom/client';
-import App from './App.jsx';
+import ssgHydrateRoot from 'rs-ssg/lib/SSGHydrateRoot.jsx'
+import routes from './routes.js'
+import App from './App.jsx'
+import "./index.css"
 
-const container = document.getElementById('root');
-
-if (container.innerHTML) {
-    hydrateRoot(container, <App />);
-} else {
-    createRoot(container).render(<App />);
-}
+ssgHydrateRoot(App, routes)

@@ -4,7 +4,6 @@ import CoreApp from "./coreApp.jsx"
 
 function SSGHydrateRoot(App, routes) {
     const initialProps = window.__INITIAL_PROPS__ || {}
-    console.log('Initial props:', initialProps)
 
     const container = document.getElementById('root')
     try {
@@ -30,7 +29,7 @@ function SSGHydrateRoot(App, routes) {
                 <StrictMode>
                     <ErrorBoundary>
                         <App {...initialProps}>
-                            <CoreApp routes={routes} />
+                            <CoreApp routes={routes} {...initialProps} />
                         </App>
                     </ErrorBoundary>
                 </StrictMode>
@@ -40,15 +39,16 @@ function SSGHydrateRoot(App, routes) {
                 <StrictMode>
                     <ErrorBoundary>
                         <App {...initialProps}>
-                            <CoreApp routes={routes}/>
+                            <CoreApp routes={routes} {...initialProps}/>
                         </App>
                     </ErrorBoundary>
                 </StrictMode>
             )
         }
     } catch (error) {
-        // hydrateRoot(container, <div>Hydration failed: {error.message}</div>)
         console.error('❌ Hydration failed:', error)
+        const root = createRoot(container);
+        root.render(<div>Hydration failed: {error.message}</div>)
     }
 }
 

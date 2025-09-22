@@ -1,9 +1,7 @@
-
 export default {
     siteUrl: 'https://rsraselmahmuddev.vercel.app',
-    siteName: 'RS Rasel Mahmud Dev',
+    siteName: 'Rasel Mahmud Dev',
     port: 3000,
-    devPort: 3000,
     seo: {
 
         // Default SEO settings - will be used if not overridden in page layer

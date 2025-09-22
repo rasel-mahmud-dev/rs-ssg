@@ -12,7 +12,7 @@
         "rs-ssg": "^{{VERSION}}",
         "react": "^19.1.1",
         "react-dom": "^19.1.1",
-        "tailwindcss": "^4.1.10"
+        "tailwindcss": "^4.1.13"
     },
     "devDependencies": {
         "@vitejs/plugin-react": "^5.0.3",

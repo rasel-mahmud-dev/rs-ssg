@@ -20,16 +20,6 @@ const routes = [
         path: '/about',
         component: lazy(() => import('./pages/About.jsx')),
         entry: "./src/pages/About.jsx",
-    },
-    {
-        path: '/blogs',
-        component: lazy(() => import('./pages/Blogs.jsx')),
-        entry: "./src/pages/Blogs.jsx",
-    },
-    {
-        path: '/blogs/:id',
-        component: lazy(() => import('./pages/BlogItem.jsx')),
-        entry: "./src/pages/BlogItem.jsx",
     }
 ]
 

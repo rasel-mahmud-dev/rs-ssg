@@ -16,7 +16,6 @@ const routes = [
         entry: "./src/pages/Examples.jsx",
         component: lazy(() => import('./pages/Examples.jsx')),
     },
-
     {
         path: '/about',
         component: lazy(() => import('./pages/About.jsx')),
@@ -28,7 +27,7 @@ const routes = [
         entry: "./src/pages/Blogs.jsx",
     },
     {
-        path: '/blogs/:slug',
+        path: '/blogs/:id',
         component: lazy(() => import('./pages/BlogItem.jsx')),
         entry: "./src/pages/BlogItem.jsx",
     }

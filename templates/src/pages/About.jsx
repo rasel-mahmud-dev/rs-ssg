@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
     const features = [
         { icon: '⚛️', title: 'React 19', description: 'Latest React with concurrent features and improved performance' },
-        { icon: '⚡', title: 'Vite', description: 'Next generation frontend tooling with instant HMR' },
+        { icon: '⚡', title: 'Esbuild', description: 'Next generation frontend tooling with instant HMR' },
         { icon: '🎨', title: 'Tailwind CSS', description: 'Utility-first CSS framework for rapid UI development' },
         { icon: '🛣️', title: 'React Router', description: 'Declarative routing for React applications' },
         { icon: '📱', title: 'Responsive', description: 'Mobile-first responsive design out of the box' },

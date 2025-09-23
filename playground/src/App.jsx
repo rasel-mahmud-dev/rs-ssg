@@ -16,3 +16,20 @@ function App(props) {
 
 export default App;
 
+
+// my-project
+//     dist
+//     node_modules
+//     public
+//     src
+//         components
+//         pages
+//         App.jsx
+//         client.jsx
+//         index.css
+//         routes.js
+//     index.html
+//     package.json
+//     pnpm-lock.yaml
+//     ssg.config.js
+//     .gitignore

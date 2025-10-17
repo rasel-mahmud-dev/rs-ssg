@@ -12,6 +12,11 @@ const routes = [
         component: lazy(() => import('./pages/Docs.jsx')),
     },
     {
+        path: '/changelog',
+        entry: "./src/pages/ChangelogPage.jsx",
+        component: lazy(() => import('./pages/ChangelogPage.jsx')),
+    },
+    {
         path: '/examples',
         entry: "./src/pages/Examples.jsx",
         component: lazy(() => import('./pages/Examples.jsx')),

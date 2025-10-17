@@ -1,11 +1,14 @@
 import findMatchingRoute from "./utils/findMatchingRoute.js";
 
-function CoreApp({routes, ...props}) {
+import NotFound from "./notFoundPage.jsx";
+
+function CoreApp({routes, notFoundPage, ...props}) {
     const currentPath = window?.location?.pathname || '/';
     const decodedPath = decodeURIComponent(currentPath)
     const match = findMatchingRoute(decodedPath, routes);
     if (!match) {
-        return <div>Not found...</div>;
+        const NotFoundComponent = notFoundPage || NotFound;
+        return <NotFoundComponent />;
     }
     const { route, params } = match;
 

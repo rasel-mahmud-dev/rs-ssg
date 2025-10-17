@@ -13,7 +13,7 @@
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.10",
-    "rs-ssg": "file:.."
+    "rs-ssg": "latest"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",

@@ -1,8 +1,13 @@
 import React, {StrictMode} from 'react'
 import {createRoot, hydrateRoot} from 'react-dom/client';
 import CoreApp from "./coreApp.jsx"
+import ErrorPage from "./errorPage.jsx";
 
-function SSGHydrateRoot(App, routes) {
+// type options = {
+//     notFoundPage?: React.ComponentType<any>
+// }
+
+function SSGHydrateRoot(App, routes, options = {}) {
     const initialProps = window.__INITIAL_PROPS__ || {}
 
     const container = document.getElementById('root')
@@ -17,19 +22,24 @@ function SSGHydrateRoot(App, routes) {
                 window.addEventListener('error', handleError)
                 return () => window.removeEventListener('error', handleError)
             }, [])
+
             if (hasError) {
-                return <div>Something went wrong during hydration.</div>
+                return <ErrorPage/>
             }
             return children
         }
 
-        if(!container.innerHTML){
+        if (!container.innerHTML) {
             const root = createRoot(container);
             return root.render(
                 <StrictMode>
                     <ErrorBoundary>
                         <App {...initialProps}>
-                            <CoreApp routes={routes} {...initialProps} />
+                            <CoreApp
+                                routes={routes}
+                                notFoundPage={options?.notFoundPage}
+                                {...initialProps}
+                            />
                         </App>
                     </ErrorBoundary>
                 </StrictMode>
@@ -39,7 +49,10 @@ function SSGHydrateRoot(App, routes) {
                 <StrictMode>
                     <ErrorBoundary>
                         <App {...initialProps}>
-                            <CoreApp routes={routes} {...initialProps}/>
+                            <CoreApp
+                                routes={routes}
+                                notFoundPage={options?.notFoundPage}
+                                {...initialProps}/>
                         </App>
                     </ErrorBoundary>
                 </StrictMode>
@@ -48,7 +61,9 @@ function SSGHydrateRoot(App, routes) {
     } catch (error) {
         console.error('❌ Hydration failed:', error)
         const root = createRoot(container);
-        root.render(<div>Hydration failed: {error.message}</div>)
+        root.render(
+            <ErrorPage error={error} errorType="hydration"/>
+        )
     }
 }
 

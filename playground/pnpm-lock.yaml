@@ -15,8 +15,8 @@ importers:
         specifier: ^19.1.1
         version: 19.1.1(react@19.1.1)
       rs-ssg:
-        specifier: file:..
-        version: file:..(@babel/core@7.28.4)
+        specifier: latest
+        version: 1.0.33(@babel/core@7.28.4)
       tailwindcss:
         specifier: ^4.1.10
         version: 4.1.13
@@ -852,8 +852,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  rs-ssg@file:..:
-    resolution: {directory: .., type: directory}
+  rs-ssg@1.0.33:
+    resolution: {integrity: sha512-EAsyvF0pG+Hh2iJCmVHtHTG8xOZDa4XLa99PjAjP7nbCXdOICWaLfMHdfKDr6G/65+xUAqrJYKcUlJP+5Lj++A==}
     hasBin: true
 
   scheduler@0.26.0:
@@ -1672,7 +1672,7 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.50.2
       fsevents: 2.3.3
 
-  rs-ssg@file:..(@babel/core@7.28.4):
+  rs-ssg@1.0.33(@babel/core@7.28.4):
     dependencies:
       '@babel/preset-react': 7.27.1(@babel/core@7.28.4)
       chalk: 5.6.2

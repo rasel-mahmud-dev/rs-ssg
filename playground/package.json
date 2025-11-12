@@ -7,13 +7,13 @@
     "dev": "rs-ssg dev",
     "build": "rs-ssg build",
     "preview": "rs-ssg preview",
-    "deploy": "firebase deploy --only hosting"
+    "deploy": "rs-ssg build && firebase deploy --only hosting"
   },
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "tailwindcss": "^4.1.10",
-    "rs-ssg": "latest"
+    "rs-ssg": "file:../"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",
